@@ -1,4 +1,37 @@
-# Unit4.Prisma.Workshop.PuppyBowl.API
+# Puppy Bowl API (Prisma + Express)
+
+This project recreates the Puppy Bowl API using Prisma ORM and Express.js. It is a fully functioning CRUD (Create, Read, Update, Delete) API connected to a PostgreSQL database.
+
+## Summary
+
+-forked and cloned a starter repo from GitHub
+-created a new PostgreSQL database called puppy_bowl_db
+-installed and configured Prisma for PostgreSQL
+-defined a Prisma schema with a Player model and a Status enum (field/bench)
+-created and seeded 10 players using prisma/seed.js
+-wrote all API routes in api/players.js to:
+  -get all players
+  -get one player by ID
+  -create a new player
+  -update a player's status
+  -delete a player
+-set up server.js to load the API and handle routes and errors
+-tested all routes using Postman, including:
+  -GET, POST, PUT, DELETE requests
+  -adding and updating player data
+  -viewing results live on http://localhost:3000/api/players
+-added custom error handling that returns a clean error message if something goes wrong
+
+## Technologies used
+
+-Node.js
+-Express.js
+-Prisma ORM
+-PostgreSQL
+-Nodemon (development)
+-Postman (testing)
+
+# Find directions below
 
 This activity guides you through building a simple CRUD API using Prisma and Express. It requires a basic understanding of relational database schemas, how to translate them into the equivalent [Prisma schemas](https://www.prisma.io/docs/concepts/components/prisma-schema), and how to [perform CRUD operations with Prisma Client](https://www.prisma.io/docs/concepts/components/prisma-client/crud).
 
