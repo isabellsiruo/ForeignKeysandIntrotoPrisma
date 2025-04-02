@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//ENUM - player status
+enum Status {
+  field
+  bench
+}
+
+//MODEL - Player
+model Player {
+  //primary key with auto-increment
+  id        Int      @id @default(autoincrement())  
+  //player's name
+  name      String    
+  //player's breed                             
+  breed     String   
+  //field or bench                             
+  status    Status       
+  //timestamp on creation                          
+  createdAt DateTime @default(now())   
+  //timestamp on update            
+  updatedAt DateTime @updatedAt                    
+}
